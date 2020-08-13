@@ -85,7 +85,7 @@ public class CareProviderController {
 		}
 	}
 
-	@GetMapping(name="/getCareProviderQuickSummary/{careProviderId}", produces = { MediaType.APPLICATION_JSON_VALUE })
+	@GetMapping("/getCareProviderQuickSummary/{careProviderId}")
 	public ResponseEntity<?> getCareProviderById(@PathVariable("careProviderId") long careProviderId) {
 		ResponseEntity response = null;
 		try {
@@ -161,8 +161,7 @@ public class CareProviderController {
 		}
 	}
 
-	@PutMapping(name="/updateCareProvider", produces = { MediaType.APPLICATION_JSON_VALUE }, consumes = {
-			MediaType.MULTIPART_FORM_DATA_VALUE })
+	@PutMapping("/updateCareProvider")
 	public ResponseEntity<?> updateCareGProvider(FormDataDTO formDataDTO) throws IOException {
 		ResponseEntity response = null;
 		if (formDataDTO.getCareProviderId() == 0) {
@@ -193,8 +192,7 @@ public class CareProviderController {
 		}
 	}
 
-	@PutMapping(name="/updateClientsActiveStatus/{careProviderId}/{activeStatus}", produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping("/updateClientsActiveStatus/{careProviderId}/{activeStatus}")
 	public ResponseEntity<?> updateClientsActiveStatus(@PathVariable("careProviderId") long careProviderId,
 			@PathVariable("activeStatus") Status activeStatus) {
 		ResponseEntity response = null;
@@ -220,8 +218,7 @@ public class CareProviderController {
 		}
 	}
 
-	@PutMapping(name="/updateCareGiversCount/{careProviderId}/{careGiversCount}", produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping("/updateCareGiversCount/{careProviderId}/{careGiversCount}")
 	public ResponseEntity<?> updateCareGiversCount(@PathVariable("careProviderId") long careProviderId,
 			@PathVariable("careGiversCount") int careGiversCount) {
 		ResponseEntity response = null;
@@ -247,8 +244,7 @@ public class CareProviderController {
 		}
 	}
 
-	@PutMapping(name="/updateProductsCount/{careProviderId}/{productsCount}", produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping("/updateProductsCount/{careProviderId}/{productsCount}")
 	public ResponseEntity<?> updateProductsCount(@PathVariable("careProviderId") long careProviderId,
 			@PathVariable("productsCount") int productsCount) {
 		ResponseEntity response = null;

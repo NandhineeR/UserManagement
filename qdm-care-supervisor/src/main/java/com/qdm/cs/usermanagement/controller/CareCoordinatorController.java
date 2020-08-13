@@ -199,8 +199,7 @@ public class CareCoordinatorController {
 		}
 	}
 
-	@PutMapping(name="/updateClientsCount/{careCoordinatorId}/{clientsCount}", produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping("/updateClientsCount/{careCoordinatorId}/{clientsCount}")
 	public ResponseEntity<?> updateClientsCount(@PathVariable("careCoordinatorId") long careCoordinatorId,
 			@PathVariable("clientsCount") int clientsCount) {
 		ResponseEntity response = null;
@@ -228,8 +227,7 @@ public class CareCoordinatorController {
 		}
 	}
 
-	@PutMapping(name="/updateCareGiversCount/{careCoordinatorId}/{careGiversCount}", produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping("/updateCareGiversCount/{careCoordinatorId}/{careGiversCount}")
 	public ResponseEntity<?> updateCareGiversCount(@PathVariable("careCoordinatorId") long careCoordinatorId,
 			@PathVariable("careGiversCount") int careGiversCount) {
 		ResponseEntity response = null;
@@ -258,8 +256,7 @@ public class CareCoordinatorController {
 		}
 	}
 
-	@PutMapping(name="/updateClientsActiveStatus/{careCoordinatorId}/{activeStatus}", produces = {
-			MediaType.APPLICATION_JSON_VALUE })
+	@PutMapping("/updateClientsActiveStatus/{careCoordinatorId}/{activeStatus}")
 	public ResponseEntity<?> updateClientsActiveStatus(@PathVariable("careCoordinatorId") long careCoordinatorId,
 			@PathVariable("activeStatus") Status activeStatus) {
 		ResponseEntity response = null;
